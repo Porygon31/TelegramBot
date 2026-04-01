@@ -1,0 +1,16 @@
+# Dépendances Node.js.
+node_modules/
+
+# Fichiers générés à la compilation.
+dist/
+
+# Variables d'environnement locales.
+.env
+
+# Données d'exécution locales.
+data/
+
+# Journaux éventuels.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
