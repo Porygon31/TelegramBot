@@ -35,7 +35,7 @@ COPY --from=build /app/dist ./dist
 RUN mkdir -p /app/data /app/uploads
 
 # Expose le port HTTP utilisé par l'application.
-EXPOSE 3000
+EXPOSE 8080
 
 # Démarre l'application compilée.
 CMD ["npm", "start"]
