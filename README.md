@@ -58,6 +58,17 @@ Cette application est mieux adaptee a une plateforme qui supporte :
 
 Le projet contient maintenant un `Dockerfile`. Vous pouvez donc le deployer comme service Docker sur une plateforme de votre choix.
 
+### Railway
+
+Le projet contient aussi un `railway.json` pret pour Railway.
+
+Configuration incluse :
+
+- build via `Dockerfile`
+- healthcheck sur `/health`
+- `numReplicas` a `1`
+- restart policy sur `ALWAYS`
+
 ### Exemple de chemins persistants
 
 Si votre hebergeur monte un volume sur `/data`, vous pouvez utiliser :
@@ -67,6 +78,22 @@ Si votre hebergeur monte un volume sur `/data`, vous pouvez utiliser :
 - `UPLOADS_DIRECTORY_PATH=/data/uploads`
 
 Si votre hebergeur monte un disque ailleurs, adaptez ces trois variables pour qu'elles pointent toutes dans le meme espace persistant.
+
+### Variables Railway conseillees
+
+Si vous utilisez un volume Railway monte sur `/data`, configurez :
+
+- `BOT_TOKEN`
+- `PUBLIC_BASE_URL`
+- `PORT=3000`
+- `SESSION_SECRET`
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD`
+- `ADMIN_IDS`
+- `DATABASE_FILE_PATH=/data/telegram-premium.sqlite`
+- `DATA_FILE_PATH=/data/content.json`
+- `UPLOADS_DIRECTORY_PATH=/data/uploads`
+- `MAX_UPLOAD_SIZE_MB=25`
 
 ## Remarque
 
