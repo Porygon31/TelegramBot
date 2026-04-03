@@ -7,8 +7,8 @@ dist/
 # Variables d'environnement locales.
 .env
 
-# Données d'exécution locales.
-data/
+# Données d'exécution locales à la racine du projet.
+/data/
 
 # Journaux éventuels.
 npm-debug.log*
